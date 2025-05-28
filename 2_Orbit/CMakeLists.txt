@@ -47,10 +47,10 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 # Adding -DBUILD_SHARED_LIBS=0 at the configuration command turns it off
 option(BUILD_SHARED_LIBS "Build using shared libraries" ON)
 
+# Specify the rpath so our library can be linked to
 if(CMAKE_BUILD_WITH_INSTALL_RPATH)
   set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
 endif()
-
 
 # Use an interface to set compiler options.
 # Note the use of ${PROJECT_NAME}, which substitutes in the project name
