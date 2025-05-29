@@ -34,6 +34,9 @@ This is a small C++ project that calculates the evolution of a binary system in 
  ```
  These are the usual steps for CMake projects. They are pretty straightforward for the user, and is why many developers have adopted CMake to distribute their code.
 
+ ## Code development
+ The beauty of these Makefiles is that they keep track of how files depend on each other. When changes are made to a file, `make` know what files depend on it so that they are also re-compiled, while leaving other files alone. New files have to be added to the CMakeLists, which then have to be re-configured, in order for this to work.
+
 
 ## Execution
 
