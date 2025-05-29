@@ -3,7 +3,11 @@
 This is a small C++ project that calculates the evolution of a binary system in Newtonian gravity. Poke around the code, and see the slides to understand its structure.
 
 ## Requirements
+- CMake:
  To compile, we configure the build with CMake. [CMake](https://cmake.org/cmake/help/latest/) is a wonderful tool that manages the building of source code; you can find an introduction in the link. It generates Makefiles - instructions for compiling and installing and more - based on your hardware and other options that you may give the configuration. This allows for code to be portable across different systems. You should be able to install it using your favorite package manager. We will need at least version 4.0; most likely a newer version will be installed but that is not a problem.
+
+- GSL:
+The numerical integration will be done with functions from the [GNU Scientific Library](https://www.gnu.org/software/gsl/doc/html/ode-initval.html#). This should also be widely available on package managers. On APT, you may have to look for the `libgsl-dev` package.
 
  ## Generating the configuration
  We will not be going into the details of CMake, but you can take a look at the root [CMakeLists.txt](CMakeLists.txt) and its comments. To generate the configuration, first create a build directory and change your working directory to it,
